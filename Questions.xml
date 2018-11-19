@@ -12,6 +12,16 @@
     <answer>True</answer> </question>
     <question> Athens is the capital of Belgium.
     <answer>False</answer> </question> 
+    <question> Sofia is the capital of Bulgaria.
+    <answer>True</answer> </question> 
+    <question> Nicosia is the capital of Cyprus.
+    <answer>True</answer> </question> 
+    <question> Prague is the capital of Czech Republic.
+    <answer>True</answer> </question> 
+    <question> Copenhagen is the capital of Denmark.
+    <answer>True</answer> </question> 
+    <question> Zagreb is the capital of Croatia.
+    <answer>True</answer> </question>                         
 </easy>
 <medium>
     <question> Melbourne is the capital of Australia.
@@ -24,6 +34,16 @@
     <answer>False</answer> </question>
     <question> Santiago is the capital of Chile.
     <answer>True</answer> </question>
+    <question> Havana is the capital of Cuba.
+    <answer>True</answer> </question> 
+    <question> Santo Domingo is the capital of Dominican Republic.
+    <answer>True</answer> </question> 
+    <question> San Salvador is the capital of El Salvador.
+    <answer>True</answer> </question> 
+    <question> Tehran is the capital of Estonia.
+    <answer>False</answer> </question> 
+    <question> Frankfurt is the capital of Germany.
+    <answer>False</answer> </question>                     
 </medium>
 <difficult>
     <question> Kabul is the capital of Azerbaijan.
@@ -35,6 +55,16 @@
     <question> Thimphu is the capital of Bhutan.
     <answer>True</answer> </question>
     <question> Sucre is the capital of Bolivia.
-    <answer>True</answer> </question>       
+    <answer>True</answer> </question>  
+    <question> Beijing is the capital of Burkina Faso.
+    <answer>False</answer> </question> 
+    <question> Bogota is the capital of Colombia.
+    <answer>True</answer> </question> 
+    <question> San Jose is the capital of Costa Rica.
+    <answer>True</answer> </question> 
+    <question> Djibouti is the capital of Taiwan.
+    <answer>False</answer> </question> 
+    <question> Quito is the capital of Equador.
+    <answer>True</answer> </question>                          
 </difficult>
 </levels>
