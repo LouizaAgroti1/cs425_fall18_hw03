@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- attributes level-question-answer -->
-<level difficulty="easy">
-    <question1> Andorra la Vella is the capital of Andorra.</question1>
-    <answer1>True</answer1>
-    <question2> Algiers is the capital of Algeria.</question2>
-    <answer2>True</answer2>
-</level>
+<levels>
+<easy>
+    <question> Andorra la Vella is the capital of Andorra.
+    <answer>True</answer> </question>
+    <question> Algiers is the capital of Algeria.
+    <answer>True</answer> </question>
+    <question> Vienna is the capital of Italy.
+    <answer>False</answer> </question>
+    <question> Buenos Aires is the capital of Argentina.
+    <answer>True</answer> </question>
+    <question> Athens is the capital of Belgium.
+    <answer>False</answer> </question> 
+</easy>
+<medium>
+    <question> Melbourne is the capital of Australia.
+    <answer>False</answer> </question>
+    <question> Sarajevo is the capital of Bosnia and Herzegovina.
+    <answer>True</answer> </question>
+    <question> Brasilia is the capital of Brazil.
+    <answer>True</answer> </question>
+    <question> Montreal is the capital of Canada.
+    <answer>False</answer> </question>
+    <question> Santiago is the capital of Chile.
+    <answer>True</answer> </question>
+</medium>
+<difficult>
+    <question> Kabul is the capital of Azerbaijan.
+    <answer>False</answer> </question>
+    <question> Minsk is the capital of Belarus.
+    <answer>True</answer> </question>
+    <question> Kuala Lumpur is the capital of Benin.
+    <answer>False</answer> </question>
+    <question> Thimphu is the capital of Bhutan.
+    <answer>True</answer> </question>
+    <question> Sucre is the capital of Bolivia.
+    <answer>True</answer> </question>       
+</difficult>
+</levels>
