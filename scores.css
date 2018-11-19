@@ -1,10 +1,50 @@
+body{
+  margin: 0%;
+  background-color: #C4CAD0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+}
 
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+.navbar {
+  overflow: hidden;
+  background-color: rgb(77, 75, 75);
+  width: 100%;
+  position: sticky;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: steelblue;
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.footer{
+    background-color: black;
+    text-align: center;
+    height: 10vh;
+    color: white;
+    font-size: 18px;
+} 
