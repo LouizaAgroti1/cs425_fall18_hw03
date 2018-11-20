@@ -42,9 +42,21 @@ body{
 }
 
 .footer{
-    background-color: black;
-    text-align: center;
-    height: 10vh;
-    color: white;
-    font-size: 18px;
+  background-color: black;
+  text-align: center;
+  height: 12vh;
+  color: white;
+  font-size: 16px;
+}
+
+#mybutton {
+  font-size: 12px;
+  background-color: black;
+  padding: 8px 16px;
+}
+#mybutton :hover {
+  opacity: 0.7;
+  background-color: #ddd;
+  display: inline-block;
 } 
+
