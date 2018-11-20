@@ -35,6 +35,18 @@
     <br>
 
     <?php
+      session_start();
+      if (!isset ($_SESSION['newsession'])) {
+        $_SESSION['newsession']=0;
+      } else if ($_SESSION['newsession']==0) {
+        session_unset();
+        session_destroy();
+        $_SESSION['newsession']=0;
+      }
+      ?>
+
+
+    <?php
   function getNextQuestion($level) {
     $xml=simplexml_load_file("Questions.xml"); 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -66,52 +78,22 @@
     <?php 
     function getQuestion($level){
         $xml=simplexml_load_file("Questions.xml"); 
-        $rand = rand(1,25);
-      //  $random = array_rand($xml->xpath($level));
-
-       // if (is_array($random) || is_object($random)){
-          //  echo $xml->question[$rand];
-        //foreach ($random as $key) {
-         //   $question = $xml->question[$rand];
-          //  echo $question[$rand];
-        
-    
+        $rand = rand(1,25);    
         return $xml->$level->question[$rand];
-     //   }
-    
     } 
-    
-     /*   $xml = new DOMDocument();
-        $rand = rand(1,5);
-        $xml->loadXML('<root><i'.$rand.'><cannot-know-i /></i'.$rand.'></root>');
-        foreach( $xml->documentElement->childNodes as $node )
-            return $node->question; // i$rand
-
-   /*     if (is_array($random) || is_object($random)){
-            echo $xml->question[$random];
-        foreach ($random as $key) {
-            $question = $xml->question[$key];
-            echo $question[$key];
-        }
-    } */
     ?>
 
-
-
-
-
-
-        <?php
+    <?php
     if (isset($_GET['act'])) {
-        $counter = 1; ?> 
+        $counter = 1; 
+        $_SESSION['newsession']=1; ?> 
         
     <div class="game">    
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
         <?php $xml=simplexml_load_file("Questions.xml"); 
             if ($GLOBALS['counter'] == 1){
-                $level = "medium";
-            //echo $xml->$level->question . "<br>";  
+                $level = "medium"; 
             } else if ($counter == 10){ ?>
                 <input class="btn btn-primary btn-lg" type="submit" value="&laquo&laquo End">
                 <input class="btn btn-primary btn-lg" type="submit" value="Finish">
@@ -137,23 +119,21 @@
 
             <div class="form-group row">
                 <div class="col-sm-10">
-                <input class="btn btn-primary btn-lg" type="submit" value="&laquo&laquo End">
+                <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
+                    <input class="btn btn-primary btn-lg" type="submit" name="end" value="&laquo&laquo End">
+                </form>
                 <input class="btn btn-primary btn-lg" type="submit" <?php getNextQuestion($level); ?> value="Next &raquo">
                 </div>
             </div>
 
             <?php echo $counter . "/10 <br>";
-            $GLOBALS['counter']++;
-
-            /*   if (!empty($_POST['End'])){
-                    exit();
-                } */   
+            $GLOBALS['counter']++;   
         ?>
     </form>
     </div>
 <?php
    } else {
-    ?>
+    $_SESSION['newsession']=0; ?>
     <div class="start">
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
             <h1>Welcome to the Game!</h1>
@@ -166,11 +146,12 @@
    </div>
     <?php
         }
-    ?>
+    ?>   
 
     <div class="fixed-bottom">
         <footer class="footer">
             <h4>Good luck!!!</h4>
+            <button id="mybutton" name="mybutton"><a href="#top">Top</a></button>
         </footer>
     </div>
 

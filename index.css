@@ -86,7 +86,16 @@ a:hover {
 .footer{
     background-color: black;
     text-align: center;
-    height: 10vh;
+    height: 12vh;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
+
+#mybutton {
+    font-size: 12px;
+    background-color: black;
+    padding: 0px 0px;
+  }
+  #mybutton :hover {
+    opacity: 0.7;
+  }
