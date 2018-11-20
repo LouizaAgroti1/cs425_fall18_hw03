@@ -53,6 +53,7 @@
     <div class="fixed-bottom">
         <footer class="footer">
             <h4>Good luck!!!</h4>
+            <button id="mybutton" name="mybutton"><a href="#top">Top</a></button>
         </footer>
     </div>
     
